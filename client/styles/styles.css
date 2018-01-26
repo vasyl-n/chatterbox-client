@@ -83,8 +83,18 @@ form input[type=text] {
     padding: 10px;
 }
 
-.friend {
-    color: #fff;
-    background-color: #0090da;
+.username {
+    font-size: 12px;
+
 }
+
+.friend {
+    font-weight: bold;
+}
+
+/*.wrapper:nth-child(even) {
+    background-color: lightgrey;
+}
+*/
+
 

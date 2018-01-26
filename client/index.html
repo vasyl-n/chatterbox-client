@@ -3,11 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>chatterbox</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="styles/styles.css">
     <!-- dependencies -->
+
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
+    <script src="env/config.js"></script>
+
     <script>
       // YOU DO NOT NEED TO EDIT THIS CODE
       if (!/(&|\?)username=/.test(window.location.search)) {
@@ -24,20 +27,16 @@
   </head>
   <body>
     <div id="main">
-      <h1>chatterbox</h1>
-<!--       <div class="input-group">
-      <input type="text" class="form-control" aria-label="Text input with dropdown button">
-      <div class="input-group-append">
-      <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Rooms</button>
-      <button class="btn btn-outline-secondary" type="button">Submit</button>
-      <div class="dropdown-menu">
-      </div>
-      </div>
-    </div> -->
-
-
+      <h1>
+        <span>chatterbox</span>
+      </h1>
       <label for="rooms">Rooms:</label>
-      <select ></select>
+      <select id="roomSelect">
+        <option>new room...</option>
+      </select>
+
+
+      <!-- <select ></select> -->
       <div class="form-group">
         <label for="input">Message:</label>
         <input type="text" class="form-control" id="input">
@@ -49,8 +48,8 @@
       <!-- Your HTML goes here! -->
     </div>
 
-    <div id="chats"></div>
-    <script src="env/config.js"></script>
+    <div id="chats" class="chat"></div>
+
     <script src="scripts/app.js"></script>
   </body>
 </html>
