@@ -1,5 +1,6 @@
 var app = {
   init: function() {
+    app.toggleSpinner();
     this.fetch().then(function() {
       app.getRooms(app.messages);
       app.rooms.forEach(function(room) {
@@ -33,6 +34,7 @@ var app = {
     });
   },
   fetch: function() {
+    app.toggleSpinner();
     return $.ajax( {
       type: 'GET',
       url: this.server,
@@ -41,6 +43,7 @@ var app = {
         limit: 10000,
       },
       success: function(data) {
+        app.toggleSpinner();
         app.messages = data.results;
         // return data.results;
       }
@@ -151,6 +154,9 @@ var app = {
     }
     app.renderAllMessagesForSelectedRoom();
     app.listenToUsernameClick();
+  },
+  toggleSpinner: function() {
+    $('.spinner').toggleClass('hidden');
   }
 };
 

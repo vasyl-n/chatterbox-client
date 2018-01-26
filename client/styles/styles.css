@@ -69,14 +69,20 @@ form input[type=text] {
     font-weight: 800;
 }
 
-.chat:hover {
+.wrapper:hover {
     background-color: #ddd;
 }
 
 .spinner {
-    float: right;
+    top: 263px;
+    position: fixed;
+    left: 50%;
+    margin-left: -45px;
     height: 46px;
     margin-bottom: 5px;
+}
+.hidden {
+    visibility: hidden;
 }
 
 .spinner img {
@@ -92,9 +98,8 @@ form input[type=text] {
     font-weight: bold;
 }
 
-/*.wrapper:nth-child(even) {
-    background-color: lightgrey;
-}
-*/
 
+  /*background-image: url("https://media.giphy.com/media/ZQ0fJkfmtyDDO/giphy.gif");*/
+  /*background-size: contain;*/
+  /*background-repeat: no-repeat;*/
 
